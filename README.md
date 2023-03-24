@@ -24,55 +24,8 @@ no fim da execução do programa.
 
 # Implementação
 
-*O codigo responsável por determinar a próxima casa é o seguinte:<br>
-<code>
-	void move(unsigned *matrix, unsigned short tamanho, unsigned short *fileira, unsigned short *coluna, unsigned *counter) {
-    do {
-        if ((*fileira == (tamanho - 1) && *fileira == *coluna)) {
-            break;
-        } else if (*fileira == (tamanho - 1)) {
-            leste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-        } else if (*coluna == (tamanho - 1)) {
-            if (matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)] &&
-                matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)]) {
-                sul(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-            } else if (matrix[tamanho * (*fileira) + ((*coluna) - 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)]) {
-                oeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-            } else {
-                sudoeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-            }
-        } else if (*coluna == 0) {
-            if (matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)] &&
-                matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) + 1)]) {
-                sudeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-            } else if (matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)]) {
-                leste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-            } else {
-                sul(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-            }
-        } else if (matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) + 1)] &&
-                   matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)] &&
-                   matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)] &&
-                   matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)]) {
-            sudeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-        } else if (matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)] &&
-                   matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)] &&
-                   matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)]) {
-            leste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-        } else if (matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)] &&
-                   matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)]) {
-            sul(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-        } else if (matrix[tamanho * (*fileira) + (*coluna - 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)])
-            oeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-        else {
-            sudoeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
-        }
-    } while (true);
-}
-	</code>
- 
-
-	    
+*O codigo responsável por determinar a próxima casa é o seguinte:
+	https://github.com/CesarHRS/Caminho-Guloso/blob/e1eae6326a9a707efbb99abdd85b370c543367f4/src/joystick.cpp#L14-L22
             
  *Casos especiais:
  *Primeira coluna:
