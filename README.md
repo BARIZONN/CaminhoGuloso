@@ -12,7 +12,7 @@ no fim da execução do programa.
 
 # Algoritmo
 
-* Ler "input.txt", que contém n matrizes quadradas de tamanho x
+ * Ler "input.txt", que contém n matrizes quadradas de tamanho x
  <img  src="https://github.com/BARIZONN/CaminhoGuloso/blob/main/img/Untitled.png"> 
 * Obter a dimensão da matriz na primeira linha do arquivo
 * Obter a posição inicial através do input do usu[ario
@@ -26,7 +26,7 @@ no fim da execução do programa.
 
 *O codigo responsável por determinar a próxima casa é o seguinte:
  https://github.com/BARIZONN/CaminhoGuloso/blob/main/src/file.cpp#L45-L87
- https://github.com/CesarHRS/Caminho-Guloso/blob/e1eae6326a9a707efbb99abdd85b370c543367f4/src/joystick.cpp#L12-L13
+ 
 
 	    
             
