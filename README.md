@@ -11,25 +11,30 @@ no fim da execução do programa.
 
 # Algoritmo
 
-* Ler "input.txt", que contém n matrizes quadradas de tamanho x
- <img  src="https://github.com/BARIZONN/CaminhoGuloso/blob/main/img/Untitled.png"> <br>
-* Obter a dimensão da matriz na primeira linha do arquivo
-* Obter a posição inicial através do input do usuário
-* Processar o caminho a ser percorrido
-* Substituir por 0 as casas percorridas
-* Caso haja mais matrizes repetir o processo acima até processar todas
-* Imprimir na tela o caminho percorrido e a soma dos valores
+* Ler "input.txt", que contém n matrizes quadradas de tamanho x.
+
+
+ <img  src="https://github.com/BARIZONN/CaminhoGuloso/blob/main/img/Untitled.png">
+	
+	
+	
+* Obter a dimensão da matriz na primeira linha do arquivo.
+* Obter a posição inicial através do input do usuário.
+* Processar o caminho a ser percorrido.
+* Substituir por 0 as casas percorridas.
+* Caso haja mais matrizes repetir o processo acima até processar todas.
+* Imprimir na tela o caminho percorrido e a soma dos valores.
 
 
 # Implementação
-
-*O codigo responsável por determinar a próxima casa é o seguinte:            
-*Casos especiais:
-*Primeira coluna:
-		Nesse caso o próximo passo não pode ser esquerda ou diagonal esquerda.            
-*Última coluna: 
+* O codigo responsável por determinar a próxima casa é o seguinte:   
+	https://github.com/BARIZONN/CaminhoGuloso/blob/60cdd2212af6e379e3593b9cd66aedf1aa94113a/src/file.cpp#L45-87
+* Casos especiais:
+* Primeira coluna:
+		Nesse caso o próximo passo não pode ser esquerda ou diagonal esquerda. <br>          
+* Última coluna: 
 		Nesse caso o próximo passo não pode ser direita ou diagonal direita.
-*Última fileira:
+* Última fileira:
 		Nesse caso o único passo possível é para direita e caso seja a última casa deve encerrar o programa
 		ou processar a próxima matriz.
 
