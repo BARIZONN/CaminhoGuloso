@@ -15,7 +15,7 @@ no fim da execução do programa.
  * Ler "input.txt", que contém n matrizes quadradas de tamanho x
  <img  src="https://github.com/BARIZONN/CaminhoGuloso/blob/main/img/Untitled.png"> 
 * Obter a dimensão da matriz na primeira linha do arquivo
-* Obter a posição inicial através do input do usu[ario
+* Obter a posição inicial através do input do usuário
 * Processar o caminho a ser percorrido
 * Substituir por 0 as casas percorridas
 * Caso haja mais matrizes repetir o processo acima até processar todas
@@ -24,7 +24,7 @@ no fim da execução do programa.
 
 # Implementação
 
-*O codigo responsável por determinar a próxima casa é o seguinte:
+*O codigo responsável por determinar a próxima casa é o seguinte:<br>
  https://github.com/BARIZONN/CaminhoGuloso/blob/main/src/file.cpp#L45-L87
  
 
