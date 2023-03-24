@@ -25,7 +25,7 @@ no fim da execução do programa.
 # Implementação
 
 *O codigo responsável por determinar a próxima casa é o seguinte:
- https://github.com/BARIZONN/CaminhoGuloso/blob/main/src/file.cpp#45-87
+ https://github.com/BARIZONN/CaminhoGuloso/blob/main/src/file.cpp#l45-87
 	    
             
  * Casos especiais:
