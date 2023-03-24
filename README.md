@@ -29,8 +29,8 @@ no fim da execução do programa.
 
 	    
             
- * Casos especiais:
-       * Primeira coluna:
+ *Casos especiais:
+       *Primeira coluna:
 		Nesse caso o próximo passo não pode ser esquerda ou diagonal esquerda.
 
              
