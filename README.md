@@ -26,23 +26,23 @@ no fim da execução do programa.
 
 *O codigo responsável por determinar a próxima casa é o seguinte:
  https://github.com/BARIZONN/CaminhoGuloso/blob/main/src/file.cpp#L45-L87
+ https://github.com/CesarHRS/Caminho-Guloso/blob/e1eae6326a9a707efbb99abdd85b370c543367f4/src/joystick.cpp#L12-L13
 
 	    
             
  *Casos especiais:
-       *Primeira coluna:
+ *Primeira coluna:
 		Nesse caso o próximo passo não pode ser esquerda ou diagonal esquerda.
 
              
 
-	*Última coluna: 
-			Nesse caso o próximo passo não pode ser direita ou diagonal direita.
+  *Última coluna: 
+		Nesse caso o próximo passo não pode ser direita ou diagonal direita.
 
 
-	Última fileira:
+  *Última fileira:
 			Nesse caso o único passo possível é para direita e caso seja a última casa deve encerrar o programa
 		ou processar a próxima matriz.
-SS
 
 * Ao chegar na última fileira e coluna da matriz o programa imprime o caminho percorrido.
 * Casa ainda exista mais matrizes no arquivo o programa repete o processo até a última.
