@@ -25,7 +25,51 @@ no fim da execução do programa.
 # Implementação
 
 *O codigo responsável por determinar a próxima casa é o seguinte:<br>
-https://github.com/BARIZONN/CaminhoGuloso/blob/6b0f6f9b9245c54061a41de752d60e06c628625a/src/file.cpp#L45-87
+<code>
+	void move(unsigned *matrix, unsigned short tamanho, unsigned short *fileira, unsigned short *coluna, unsigned *counter) {
+    do {
+        if ((*fileira == (tamanho - 1) && *fileira == *coluna)) {
+            break;
+        } else if (*fileira == (tamanho - 1)) {
+            leste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+        } else if (*coluna == (tamanho - 1)) {
+            if (matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)] &&
+                matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)]) {
+                sul(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+            } else if (matrix[tamanho * (*fileira) + ((*coluna) - 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)]) {
+                oeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+            } else {
+                sudoeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+            }
+        } else if (*coluna == 0) {
+            if (matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)] &&
+                matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) + 1)]) {
+                sudeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+            } else if (matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)]) {
+                leste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+            } else {
+                sul(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+            }
+        } else if (matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) + 1)] &&
+                   matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)] &&
+                   matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)] &&
+                   matrix[tamanho * ((*fileira) + 1) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)]) {
+            sudeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+        } else if (matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + (*coluna)] &&
+                   matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)] &&
+                   matrix[tamanho * (*fileira) + ((*coluna) + 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)]) {
+            leste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+        } else if (matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)] &&
+                   matrix[tamanho * ((*fileira) + 1) + (*coluna)] >= matrix[tamanho * (*fileira) + ((*coluna) - 1)]) {
+            sul(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+        } else if (matrix[tamanho * (*fileira) + (*coluna - 1)] >= matrix[tamanho * ((*fileira) + 1) + ((*coluna) - 1)])
+            oeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+        else {
+            sudoeste(matrix, tamanho, &(*fileira), &(*coluna), &(*counter));
+        }
+    } while (true);
+}
+	</code>
  
 
 	    
