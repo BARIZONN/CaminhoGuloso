@@ -11,7 +11,7 @@ no fim da execução do programa.
 
 # Algoritmo
 
- * Ler "input.txt", que contém n matrizes quadradas de tamanho x
+* Ler "input.txt", que contém n matrizes quadradas de tamanho x
  <img  src="https://github.com/BARIZONN/CaminhoGuloso/blob/main/img/Untitled.png"> 
 * Obter a dimensão da matriz na primeira linha do arquivo
 * Obter a posição inicial através do input do usuário
@@ -26,17 +26,15 @@ no fim da execução do programa.
 *O codigo responsável por determinar a próxima casa é o seguinte:
 	
             
- *Casos especiais:
- *Primeira coluna:
+*Casos especiais:
+*Primeira coluna:
 		Nesse caso o próximo passo não pode ser esquerda ou diagonal esquerda.
 
              
-
-  *Última coluna: 
+*Última coluna: 
 		Nesse caso o próximo passo não pode ser direita ou diagonal direita.
 
-
-  *Última fileira:
+*Última fileira:
 			Nesse caso o único passo possível é para direita e caso seja a última casa deve encerrar o programa
 		ou processar a próxima matriz.
 
